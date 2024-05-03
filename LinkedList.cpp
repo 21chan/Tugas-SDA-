@@ -3,8 +3,8 @@ using namespace std;
 
 class Node {
 public:
-    char id;
-    Node* next;
+    	char id;
+    	Node* next;
     
     Node() {
         next = NULL;
@@ -13,8 +13,8 @@ public:
 
 class LinkedList {
 public:
-    Node* head;
-    Node* tail;
+    	Node* head;
+    	Node* tail;
     
     LinkedList() {
         head = tail = NULL;
@@ -46,7 +46,9 @@ public:
             insertToTail(data);
         } else if (head->id == data) {
             insertToHead(data);
-        } else {
+        } else if (head  == NULL){
+	    cout << "Tidak Ada Data, Tidak Bisa Mengisi Data di tengah" << endl;
+	} else {
             Node* node = new Node();
             node->id = data;
             
